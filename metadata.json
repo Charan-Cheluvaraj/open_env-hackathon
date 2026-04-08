@@ -1,0 +1,5 @@
+{
+  "name": "PriceSim RL Environment",
+  "description": "A real-world price simulation environment for Reinforcement Learning, implementing the OpenEnv specification.",
+  "requestFramePermissions": []
+}

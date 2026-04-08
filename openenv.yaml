@@ -1,0 +1,29 @@
+name: PriceSim
+version: 1.0.0
+description: A real-world price simulation environment for Reinforcement Learning.
+author: T V CHELUVARAJ
+tasks:
+  - id: easy
+    description: Maximize profit with constant demand and no competitors.
+    difficulty: easy
+  - id: medium
+    description: Maximize profit with fluctuating demand and a simple competitor.
+    difficulty: medium
+  - id: hard
+    description: Maximize profit with inventory constraints, seasonal demand, and aggressive competitor.
+    difficulty: hard
+observation_space:
+  type: object
+  properties:
+    current_price: { type: number, min: 0, max: 1000 }
+    competitor_price: { type: number, min: 0, max: 1000 }
+    inventory: { type: number, min: 0, max: 100 }
+    demand_signal: { type: number, min: 0, max: 2 }
+    step: { type: integer, min: 0, max: 30 }
+action_space:
+  type: object
+  properties:
+    price: { type: number, min: 0, max: 1000 }
+reward_range: [0.0, 1.0]
+benchmark: PriceSim
+
