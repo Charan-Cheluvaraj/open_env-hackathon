@@ -4,6 +4,7 @@ emoji: 🚀
 colorFrom: blue
 colorTo: green
 sdk: docker
+add app_port: 3000
 tags:
 - openenv
 ---
