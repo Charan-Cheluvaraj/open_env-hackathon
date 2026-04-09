@@ -1,17 +1,10 @@
 FROM node:20-slim
-
 WORKDIR /app
-
 COPY package*.json ./
-RUN npm install
-
+# Install everything including devDependencies (for tsx)
+RUN npm install 
 COPY . .
-
-# No build step needed for TSX execution, but we keep it for safety if requested
-# RUN npm run build
-
-EXPOSE 3000
-
-# Use start script which runs server.ts via tsx
-CMD ["npm", "run", "start"]
-
+# Expose the HF default port
+EXPOSE 7860
+# Use npx to ensure tsx is found
+CMD ["npx", "tsx", "server.ts"]
