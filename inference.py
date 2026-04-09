@@ -6,7 +6,7 @@ from openai import OpenAI
 from typing import List, Optional
 
 # --- Configuration ---
-API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:3000")
+API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:7860")
 HF_TOKEN = os.getenv("HF_TOKEN", "")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", HF_TOKEN)
 OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
