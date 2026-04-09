@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pricesim-env"
+version = "1.0.0"
+description = "A real-world price simulation environment for Reinforcement Learning."
+dependencies = [
+    "openai",
+    "httpx",
+    "python-dotenv"
+]
